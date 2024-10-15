@@ -1,5 +1,6 @@
 import 'package:belajar/info.dart';
 import 'package:belajar/profile.dart';
+import 'package:belajar/simple_app/home.dart';
 import 'package:belajar/state_page.dart';
 import 'package:flutter/material.dart';
 
@@ -43,6 +44,14 @@ class _HomeState extends State<Home> {
                   }));
                 },
                 child: Text('Pindah Ke State')
+            ),
+            ElevatedButton(
+                onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_){
+                    return SimpleAppHome();
+                  }));
+                },
+                child: Text('Pindah Ke Simple APP')
             )
           ],
         )
