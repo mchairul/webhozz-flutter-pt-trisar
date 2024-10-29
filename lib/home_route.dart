@@ -1,5 +1,6 @@
 import 'package:belajar/info.dart';
 import 'package:belajar/routes_app.dart';
+import 'package:belajar/state_management/main.dart';
 import 'package:flutter/material.dart';
 
 class HomeRoute extends StatelessWidget {
@@ -44,6 +45,16 @@ class HomeRoute extends StatelessWidget {
                   );
                 },
                 child: Text('Pindah ke Simple APP')
+            ),
+            ElevatedButton(
+                onPressed: (){
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (_){
+                      return MainState();
+                    })
+                  );
+                },
+                child: Text('Pindah Ke State Management')
             )
           ],
         ),
